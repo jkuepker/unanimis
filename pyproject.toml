@@ -21,6 +21,11 @@ classifiers = [
     "Environment :: Console",
 ]
 
+[project.urls]
+Homepage = "https://github.com/jkuepker/unanimis"
+Source = "https://github.com/jkuepker/unanimis"
+Issues = "https://github.com/jkuepker/unanimis/issues"
+
 [project.optional-dependencies]
 semantic = ["fastembed>=0.8,<0.9"]
 pdf = ["pypdf>=6.18,<7"]

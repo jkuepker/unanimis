@@ -4,13 +4,15 @@ unanimis is local-first shared memory for people and AI coding agents. A command
 
 ## Install
 
-Requires Python 3.11 or newer on macOS or Linux (it uses `fcntl`, so Windows is not supported). From a checkout of this repository:
+Requires Python 3.11 or newer on macOS or Linux (it uses `fcntl`, so Windows is not supported). Clone the repository and install from the checkout:
 
 ```sh
+git clone https://github.com/jkuepker/unanimis.git
+cd unanimis
 pip install .
 ```
 
-That installs the `unim` command (`python -m unanimis` also works) with no third-party dependencies. Use a virtual environment or `pipx install .` if you prefer to keep it off your system Python. Two optional extras add features:
+Or install straight from GitHub without cloning: `pip install "git+https://github.com/jkuepker/unanimis.git"`. That installs the `unim` command (`python -m unanimis` also works) with no third-party dependencies. Use a virtual environment or `pipx install .` if you prefer to keep it off your system Python. Two optional extras add features:
 
 ```sh
 pip install ".[semantic]"       # local embeddings for hybrid search (fastembed)
