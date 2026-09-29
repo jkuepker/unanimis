@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unanimis"
+version = "0.1.0"
+description = "Local, human-readable shared memory for people and AI coding agents: CLI, stdio MCP server, and a reviewable librarian."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Josef Kuepker" }]
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+]
+
+[project.optional-dependencies]
+semantic = ["fastembed>=0.8,<0.9"]
+pdf = ["pypdf>=6.18,<7"]
+
+[project.scripts]
+unim = "unanimis.cli:main"
+
+[tool.setuptools]
+packages = ["unanimis"]
+
+[tool.setuptools.package-data]
+unanimis = ["agent-policy.md"]
